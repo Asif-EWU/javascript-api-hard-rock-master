@@ -7,6 +7,19 @@ body{
     background-position: top;
 }
 
+.navbar-bg {
+    background-color: rgba(62, 62, 104, 0.6);
+    opacity: 1;
+}
+
+.dropdown-bg {
+    background-color: rgb(62, 62, 104);
+}
+
+.dropdown-item:hover {
+    background-color:  rgb(62, 62, 130);
+}
+
 .form-control{
     background-color:rgba(255, 255, 255, 0.2);
     padding: 22px;

@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-    <title>Hard Rock Solution - Song Lyric App</title>
+    <title>Hard Rock Lyrics</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Custom css -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar  navbar-dark my-3">
-            <a class="navbar-brand" href="#">
+        <nav id="nav-section" class="navbar navbar-dark my-3 sticky-top navbar-bg">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Hard Rock Solution">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,16 +26,16 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">API</a>
+                        <div class="dropdown-menu dropdown-bg" aria-labelledby="dropdownId">
+                            <a class="dropdown-item text-light" href="song-artist-api.html" target="_blank">Search by title or artist</a>
+                            <a class="dropdown-item text-light" href="lyrics-api.html" target="_blank">Search for song lyrics</a>
                         </div>
                     </li>
                 </ul>
