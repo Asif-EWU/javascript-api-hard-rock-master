@@ -46,8 +46,8 @@
             <div class="search-bar col-md-6 mx-auto">
                 <h1 class="text-center">Lyrics Search</h1>
                 <div class="search-box my-5">
-                    <input type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button class="btn btn-success search-btn">Search</button>
+                    <input id="search-input" type="text" onkeyup="myFunction()" class="form-control bg-light" placeholder="Enter Title / Artist / Album">
+                    <!-- <button class="btn btn-success search-btn">Search</button> -->
                 </div>
             </div>
             <!-- === Simple results === -->
@@ -160,6 +160,35 @@
     Gonna feel like! (Na na na...)
                 </pre>
             </div>
+
+
+
+            
+
+            <div class="accordion" id="accordionExample">
+                <div class="card bg-transparent">
+                  <div class="card-header lyrics-bg row align-items-center py-4" id="headingOne">
+                    <div class="col-md-9">
+                        <h3 class="lyrics-name">Purple Noon</h3>
+                        <p class="author lead">Album by <span class="font-weight-bold">Washed Out</span></p>
+                    </div>
+                    <div class="col-md-3">
+                      <button class="btn btn-success text-light" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Get Lyrics
+                      </button>
+                    </div>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body lyrics-bg">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
             <!-- === Fancy results === -->
             <div class="search-result col-md-8 mx-auto py-4">
                 <!-- single result -->
@@ -189,7 +218,7 @@
                 <div class="single-result row align-items-center my-3 p-3">
                     <div class="col-md-9">
                         <h3 class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span>Washed Out</span></p>
+                        <p class="author lead">Album by <span class="artist-bold">Washed Out</span></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
                         <button class="btn btn-success">Get Lyrics</button>
@@ -214,6 +243,8 @@
         </main>
     </div>
     <!-- Optional JavaScript -->
+    <script src="main.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
