@@ -1,5 +1,6 @@
 let parentDiv = document.getElementById('list-container');
 let childDiv;
+let arr; 
 
 const myFunction = () => {
     const inputValue = document.getElementById('search-input').value;
@@ -8,13 +9,33 @@ const myFunction = () => {
         return;
     }
 
-    fetch('https://api.lyrics.ovh/suggest/' + inputValue)
+    const url = 'https://api.lyrics.ovh/suggest/' + inputValue;
+    const encodedUrl = encodeURI(url);
+
+    fetch(encodedUrl)
         .then(res => res.json())
         .then(result => {
             arr = result.data.slice(0, 10);
             console.log(arr);
             displayData(arr);
-        });
+        })
+        .catch(error => console.log(error));
+};
+
+const getLyrics = id => {
+    const songInfo = arr.find(item => item.id == id);
+    const lyricsUrl = `https://api.lyrics.ovh/v1/${songInfo.artist}/${songInfo.title}`;
+    const encodedUrl = encodeURI(lyricsUrl);
+    console.log(encodedUrl);
+
+    fetch(encodedUrl)
+        .then(res => res.json())
+        .then(data => displayLyrics(songInfo, data))
+        .catch(error => console.log(error));
+};
+
+const displayLyrics = (songInfo, data) => {
+    console.log(data);
 };
 
 const getDuration = second => {
@@ -26,7 +47,7 @@ const getDuration = second => {
 };
 
 const displayData = data => {
-    const arr = [];
+    arr = [];
     childDiv = '';
 
     data.forEach(item => {
